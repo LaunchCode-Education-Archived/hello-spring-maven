@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<title>Hello, Spring!</title>
+	
+	<head th:replace="template :: head">
 	</head>
+	
 	<body>
 		<h1 th:text="'Hello, ' + ${name} + '!'"></h1>
 	</body>
+	
+	<div th:replace="template :: footer"></div>
+	
 </html>
