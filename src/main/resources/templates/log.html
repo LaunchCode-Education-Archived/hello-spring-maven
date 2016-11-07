@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+	<head th:replace="template :: header">
+	</head>
+	
+	<body>
+		<ul>
+			<!--  display the log of all hellos -->
+			<li th:each="log : ${logs}">We said hello to <span th:text="${log.name}"></span> at <span th:text="${#dates.format(log.timestamp, 'yyyy-MM-dd')}"></span></li>
+		</ul>
+	</body>
+	
+	<div th:replace="template :: footer"></div>
+	
+</html>
